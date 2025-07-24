@@ -1,0 +1,128 @@
+Last Session- 
+what is javascript
+variable - var , let and const
+hoisting
+operators
+template literal => ``
+event
+
+Today's Session - 
+function -
+    function declaration
+    function expression
+    arrow function 
+Form Handling
+Array object 
+User Defined Object 
+
+
+
+//function declaration
+funName()
+function funName(){}
+
+funName()
+
+//function expression
+function(){} //anonynomus function - fun without name
+
+let fun1 =  function(){} //never hoist
+ES6 -
+let fun1 =  ()=>{} // arrow function
+
+
+let fun1 = function(a,b){
+    return a+b
+}
+
+let fun1 = (a,b)=>a+b
+
+console.log(fun1(2,3)) //5
+
+////////////////////////////////
+
+javascript object -
+Object 
+1. builtin - Array , String , Boolean, Number, Math, Date 
+2. user Defined
+
+Array object- 
+
+//ES6 functions 
+forEach 
+map 
+filter 
+find 
+findIndex 
+reduce
+
+arr.forEach(()=>{})
+
+callback function - function definition in another fun calling 
+
+function forEach(fun){ //fun = ()=>{}
+.
+.
+.
+fun()
+}
+/////////////////
+arr.forEach((val,index)=>{})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
