@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="date1">EnterDate</label>
+    <input type="date" id="date1"/>
+    <button type="button" onclick="dateOp()">Check Date</button>
+
+    <input type="date" id="date2"/>
+    <script>
+        document.getElementById("date2").max = new Date().toISOString().split("T")[0] //2025-08-07T03:07:47.840Z 
+        
+        let d = new Date()
+        document.write(d)
+        document.write(d.toISOString())
+
+        let dateOp = ()=>{
+          let dob = document.getElementById("date1").value //string
+        //   alert(dob)
+
+        // convert string date into Dateobjet
+        let dob1 =  new Date(dob)
+        // alert(dob1)
+        if(d < dob1){
+            alert("Date should not be futuristic")
+        }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -60,7 +60,8 @@ console.log(total)
 
 
 
-
+console.log(arr1.join('+'))
+console.log(arr1.join(''))
 
 
 
