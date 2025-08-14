@@ -1,3 +1,4 @@
+/*
 let arr = [1,6,4,6]
 let arr1 = new Array(7,1,5,8,9)
 // console.log(`array = ${arr1}`)
@@ -43,6 +44,8 @@ console.log(total)
 //prev = 6 curr =5  =11
 //prev =11  curr =7 =18
 // reduce vs reduceRight
+*/
+
 
 
 

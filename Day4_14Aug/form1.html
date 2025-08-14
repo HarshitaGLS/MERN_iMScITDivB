@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="frm">
+        <label for="name">NAme</label>
+        <input type="text" id="name" name="name">
+        <span id="err" style="color:red"></span><br/>
+        <label for="name">Email</label>
+        <input type="text" id="email" name="email"><br/>
+        <button type="submit" id="register">Submit</button>
+    </form>
+    <script>
+        // document.getElementById("register").onclick
+
+        document.getElementById("frm").onsubmit =(e)=>{
+            e.preventDefault()
+            console.log(e)
+            let name = document.getElementById("name").value
+            if(name==""){
+                document.getElementById("err").innerHTML = "name is required"
+            }
+        }
+    </script>
+</body>
+</html>

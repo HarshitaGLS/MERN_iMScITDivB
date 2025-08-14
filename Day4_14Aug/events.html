@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btn1">CLick Me</button>
+    <p id="data"></p>
+    <script>
+        // document.getElementById("btn1").onclick = ()=>{
+        //     alert("button1 clicked")
+        // }
+        // document.getElementById("btn1").onclick = ()=>{
+        //     document.getElementById("data").innerHTML="<b>button1 clicked</b>"
+        // }
+
+        // document.getElementById("btn1").addEventListener("click",()=>alert("button clicked"))
+        // document.getElementById("btn1").addEventListener("click",()=>document.getElementById("data").innerHTML="<b>button1 clicked</b>")
+
+
+        document.getElementById("btn1").addEventListener("click",(e)=>{
+            console.log(e) // info of event and target element
+            console.log(e.target.innerHTML)
+            alert("button clicked")
+        })
+
+        document.getElementById("btn1").addEventListener("click",(event)=>{
+            document.getElementById("data").innerHTML="<b>button1 clicked</b>"
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
