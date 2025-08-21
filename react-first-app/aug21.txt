@@ -1,0 +1,46 @@
+npm (node package manager)
+
+Javascript 
+
+node -v 
+npm -v 
+npx create-react-app appname // deprecated 
+vite tool 
+
+npm create vite 
+y 
+react-first-app 
+
+
+function app(){
+    return "hello"
+}
+
+app()
+
+function App(){
+    return <h1>hello react</h1>
+}
+
+<App></App>
+<App/>
+
+React Fragment -
+<></>
+
+<React.Fragment></React.Fragment>
+
+import {Fragment} from 'react'
+<Fragment></Fragment>
+
+
+
+
+
+
+
+
+
+
+
+
