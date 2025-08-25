@@ -1,0 +1,18 @@
+property (props) -
+
+<h1></h1>
+<Counter username="" ></Counter>
+
+Parent to  child -> 
+props are ready only 
+
+props = {username:"",isActve:.............}
+
+conditional rendering  -
+ternary - ?:
+short circuit - &&
+                ||
+
+a>b ? a :b (ifelse )
+a>b && a (simple if) 
+a>b || b (simple false)
