@@ -4,6 +4,8 @@ import Home from './aug21/Home'
 import Counter from './aug25/Counter'
 import Formhandling from './aug26/formhandling'
 import Statedemo from './aug26/Statedemo'
+import Products from './Sep18/Products'
+import PropsRemaining from './Sep18/PropsRemaining'
 
 function App() {
 
@@ -20,8 +22,16 @@ function App() {
       ></Counter> */}
       {/* <Statedemo username="Harshita"/> */}
 
-        <Formhandling/>
-
+        {/* <Formhandling/> */}
+        {/* <PropsRemaining fname="Ram" lname="Sharma">
+          <b>bold text</b>
+        </PropsRemaining> */}
+        <hr/>
+        {/* <PropsRemaining fname="Siya">
+          <h1>heading tag</h1>
+          <EventDemo/>
+        </PropsRemaining> */}
+        <Products/>
     </>
   )
 }

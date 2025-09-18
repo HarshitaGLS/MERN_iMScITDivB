@@ -1,0 +1,53 @@
+destructuring props
+children prop
+list rendering (Array of Object)
+Image 
+
+
+<Counter username="GLS" 
+      isLoggedIn={true} 
+      mobile={9987797}
+      isActive={null}
+      ></Counter> 
+<Counter username="LJ" isActive={null}></Counter> 
+
+const Counter = (props)=>{}
+props = {username="GLS" ,isLoggedIn=true , mobile=9987797 ,isActive=null}
+
+
+const Counter = ({username,mobile=9999999})=>{}
+
+div id,class
+    p style
+        b 
+    div style  name
+        h1
+
+<Counter username="rte" isLoggedIn={true}>
+    <h1>heading</h1>
+    <PropsDemo1></PropsDemo1>
+</Counter>
+
+props.children => children
+
+id:1,name:'',category:"",image: , price:, stock:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
