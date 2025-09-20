@@ -6,6 +6,8 @@ import Formhandling from './aug26/formhandling'
 import Statedemo from './aug26/Statedemo'
 import Products from './Sep18/Products'
 import PropsRemaining from './Sep18/PropsRemaining'
+import ClassDemo from './sep20/ClassDemo'
+import Register from './sep20/Register'
 
 function App() {
 
@@ -31,7 +33,13 @@ function App() {
           <h1>heading tag</h1>
           <EventDemo/>
         </PropsRemaining> */}
-        <Products/>
+        {/* <Products/> */}
+        {/* <Register title="Register Here"/> */}
+
+        <ClassDemo username="GLS" 
+         isLoggedIn={true} 
+        mobile={9987797}
+        isActive={null}></ClassDemo>
     </>
   )
 }

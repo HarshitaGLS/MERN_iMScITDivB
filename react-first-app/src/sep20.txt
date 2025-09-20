@@ -1,0 +1,19 @@
+    const user = {username:"Ram",email:"ram@gmail.com",mobile:"",password:""}
+
+    const user = {username:"Siya",email:"ram@gmail.com",mobile:"",password:""}
+
+    Components - 
+    1. functional Components
+    2. class Components
+    
+
+
+
+
+
+
+
+
+
+
+
