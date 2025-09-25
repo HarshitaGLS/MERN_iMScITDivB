@@ -17,6 +17,7 @@ const myRoutes = createBrowserRouter([
   {path:"/", element:<App/>,
     children :[
     {path:'', element:<Home/>},
+    {path:'home', element:<Home/>},
     {path:'login', element:<Login/>},
     {path:'about', element:<About/>},
     {path:'products', element:<Products/>},
@@ -27,6 +28,7 @@ const myRoutes = createBrowserRouter([
   {path:'*', element:<Pagenotfound/>},
 ])
 // / means root (http://localhost:2000)
+    // {index:true, element:<Home/>},
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={myRoutes}/>,
