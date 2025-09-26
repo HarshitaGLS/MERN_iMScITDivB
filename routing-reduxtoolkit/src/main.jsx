@@ -11,6 +11,8 @@ import { About } from './pages/About.jsx';
 import { Products } from './components/Products.jsx';
 import { ConatctUs } from './pages/ConatctUs.jsx';
 import { Pagenotfound } from './pages/Pagenotfound.jsx';
+import { Provider } from 'react-redux';
+import mystore from './redux/store.js';
 
 
 const myRoutes = createBrowserRouter([
@@ -27,9 +29,18 @@ const myRoutes = createBrowserRouter([
   {path:'/register', element:<Register/>},
   {path:'*', element:<Pagenotfound/>},
 ])
+
+
 // / means root (http://localhost:2000)
     // {index:true, element:<Home/>},
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={myRoutes}/>,
+  <Provider store={mystore}>
+    <RouterProvider router={myRoutes}/>
+  </Provider>
+  ,
 )
+
+
+
+
