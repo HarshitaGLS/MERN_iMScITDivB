@@ -1,0 +1,63 @@
+mongoexport -d company1 -c users -o users.json --jsonArray
+
+ db.users.distinct("age")
+ 
+company1> db.users.find({age1:{$exists:true}})
+
+
+db.users.find({age:{$type:"number"}})
+
+$size , $all 
+
+db.users.find({tags:{$size:4}})
+
+$all -
+db.users.find({tags:{$all : ["et","dolor"] }})
+
+tags :["et","dolor"]
+
+
+$elemMatch  - 
+
+ex-  "marks":[
+	{"name":"10th","obtained":90},
+	{"name":"12th","obtained":80}
+]
+
+db.users.find({marks:{$elemMatch:{obtained:90}}})
+
+
+Embeded Document -
+
+ db.users.find({"company.title":"OVOLO"}).count()
+ 
+ db.users.find({"company.location.country":"USA"}).count()
+ 
+company1> db.users.createIndex({gender:1})
+gender_1
+company1> db.users.getIndexes()
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  { v: 2, key: { gender: 1 }, name: 'gender_1' }
+
+]
+
+ db.users.find({gender:"female"}).explain('executionStats')
+company1> db.users.createIndex({age:-1})
+age_-1
+company1> db.users.getIndexes()
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  { v: 2, key: { gender: 1 }, name: 'gender_1' },
+  { v: 2, key: { age: -1 }, name: 'age_-1' }
+]
+company1> db.users.dropIndex("age_-1")
+{ nIndexesWas: 3, ok: 1 }
+
+
+
+
+
+
+
+
