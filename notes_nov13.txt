@@ -1,0 +1,100 @@
+db.users.aggregate(
+	[
+		{},
+           {}
+]
+)
+
+
+[
+  {$match: {
+    isActive:true ,
+    age:{$gt:20}
+  }}
+]
+
+
+[
+  {$match: {
+    isActive:true   }},
+  {$count: 'Total active users'}
+]
+
+
+[
+  {$match: {
+    isActive:true   }},
+  {$project: {
+    name:1,age:1,_id:0
+  }}
+ ]
+
+/////////////////////////////////////////////
+[
+  {$unwind: "$tags"}
+]
+
+
+//////////////////////////////////////////
+
+[
+  {$group: {
+    _id: "$age",
+    "totalusers": {
+      $sum: 1
+    }
+  }},
+  {$sort: {
+    totalusers: 1
+  }}
+]
+
+
+[
+  {$group: {
+    _id: null,
+    "totalusers": {
+      $sum: 1
+    }
+  }}
+]
+
+
+[
+  {$group: {
+    _id: "$age",
+    "totalusers": {
+      $push:"$name"
+    }
+  }}
+]
+
+
+[
+  {$lookup: {
+    from: "authors",
+    localField: "author_id",
+    foreignField: "_id",
+    as: "author_details"
+  }},
+  {$unwind:"$author_details"}
+]
+
+
+////
+[
+  {$lookup: {
+    from: "authors",
+    localField: "author_id",
+    foreignField: "_id",
+    as: "author_details"
+  }},
+  {$unwind:"$author_details"} ,
+  {$project: {
+   title:1,genre:1,
+    "author name" :"$author_details.name"
+  }}
+]
+
+
+
